@@ -19,4 +19,7 @@ Earlier it used to be:
 
 	* Bus 002 Device 005: ID 12d1:1436 Huawei Technologies Co., Ltd.
 
-	ok<code>ok</code>ok
+So i wrote a file <b>66-mymodemmu.rules</b> under <b>"/etc/udev/rules.d"</b> with the content:
+
+	ACTION=="add", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1446", RUN+="/home/Murphy/mymodem/usbmode"
+
