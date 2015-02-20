@@ -28,8 +28,11 @@ And contents of "/home/Murphy/mymodem/usbmode.sh" should be:
 	#!/bin/bash
 	sudo usb_modeswitch -I -W -c /etc/usb_modeswitch.d/12d1\:1446
 
-And now when my modem is plugged in, 66-mymodemmy.rules runs /home/Murphy/mymodem/usbmode.sh an s system detects the modem.
+And now when my modem is plugged in, 66-mymodemmy.rules runs /home/Murphy/mymodem/usbmode.sh and system detects the modem.
 And  <b><i> lsusb </i></b> confirms that:
 	
 	* Bus 002 Device 005: ID 12d1:1436 Huawei Technologies Co., Ltd.
 
+And i got my modem working !
+
+<b>Sameer Barha (El_Diablo)</b>
