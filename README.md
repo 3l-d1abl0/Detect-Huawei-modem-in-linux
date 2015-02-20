@@ -19,7 +19,17 @@ Earlier it used to be:
 
 	* Bus 002 Device 005: ID 12d1:1436 Huawei Technologies Co., Ltd.
 
-So i wrote a file <b>66-mymodemmu.rules</b> under <b>"/etc/udev/rules.d"</b> with the content:
+So i wrote a file <b>66-mymodemmy.rules</b> under <b>"/etc/udev/rules.d"</b> with the content:
 
-	ACTION=="add", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1446", RUN+="/home/Murphy/mymodem/usbmode"
+	ACTION=="add", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1446", RUN+="/home/Murphy/mymodem/usbmode.sh"
+
+And contents of "/home/Murphy/mymodem/usbmode.sh" should be:
+
+	#!/bin/bash
+	sudo usb_modeswitch -I -W -c /etc/usb_modeswitch.d/12d1\:1446
+
+And now when my modem is plugged in, 66-mymodemmy.rules runs /home/Murphy/mymodem/usbmode.sh an s system detects the modem.
+And  <b><i> lsusb </i></b> confirms that:
+	
+	* Bus 002 Device 005: ID 12d1:1436 Huawei Technologies Co., Ltd.
 
