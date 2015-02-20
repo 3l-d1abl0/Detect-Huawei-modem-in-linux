@@ -12,4 +12,5 @@ Goto the line <b> dbg ("cant't kmalloc dev"); </b> for me it was on line 1455, a
 
 I went through the whole process of installation an dyes this time <b>"The Linux NDIS driver is installed successfully"</b>.
 But i still didn't get the Gui. it was not only the Gui, my datacard itself wasn't being detected. So i ended up uninstalling the setup but still couldn't get my modem detected.	<br>
-By checking <i> lsusb </i> results i found out my modem was getting detected in a differnet mode.
+By checking <b><i> lsusb </i></b> results i found out my modem was getting detected in a differnet mode:
+	* Bus 002 Device 005: ID 12d1:1446 Huawei Technologies Co., Ltd.
