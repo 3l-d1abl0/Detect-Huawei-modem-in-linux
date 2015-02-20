@@ -1,0 +1,1 @@
+ACTION=="add", ATTRS{idVendor}=="12d1", ATTRS{idProduct}=="1446", RUN+="/home/Murphy/mymodem/usbmode.sh"
